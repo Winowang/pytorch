@@ -1,7 +1,7 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-#FROM winowang/jupyter_images:latest
-FROM winowang/jupyter_gpu:latest
+FROM winowang/jupyter_images:latest
+#FROM winowang/jupyter_gpu:latest
 
 LABEL maintainer="Jupyter Pytorch"
 
