@@ -14,7 +14,10 @@ RUN conda install --yes \
 # pytorch  
 # please vist the URL(https://pytorch.org/) to check more verions for cpu or gpu
 RUN conda install --quiet --yes pytorch torchvision cuda90 -c pytorch && \
+
+#RUN conda install --quiet --yes pytorch torchvision cuda92 -c pytorch && \
 #RUN conda install --quiet --yes pytorch-cpu torchvision-cpu -c pytorch && \
+
     conda remove --quiet --yes --force qt pyqt && \
     conda clean -tipsy && \
     npm cache clean --force && \
