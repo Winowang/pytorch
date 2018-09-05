@@ -1,7 +1,7 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-FROM winowang/jupyter_images:latest
-#FROM winowang/jupyter_gpu:latest
+#FROM winowang/jupyter_images:latest
+FROM winowang/jupyter_gpu:cuda92
 
 LABEL maintainer="Jupyter Pytorch"
 
@@ -13,9 +13,9 @@ RUN conda install --yes \
 
 # pytorch  
 # please vist the URL(https://pytorch.org/) to check more verions for cpu or gpu
-RUN conda install --quiet --yes pytorch torchvision cuda90 -c pytorch && \
+#RUN conda install --quiet --yes pytorch torchvision cuda90 -c pytorch && \
+RUN conda install --quiet --yes pytorch torchvision cuda92 -c pytorch && \
 
-#RUN conda install --quiet --yes pytorch torchvision cuda92 -c pytorch && \
 #RUN conda install --quiet --yes pytorch-cpu torchvision-cpu -c pytorch && \
 
     conda remove --quiet --yes --force qt pyqt && \
