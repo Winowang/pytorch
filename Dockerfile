@@ -23,4 +23,6 @@ RUN conda install --quiet --yes pytorch torchvision cuda92 -c pytorch && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     rm -rf /home/.cache/yarn && \
     rm -rf /home/.node-gyp
+
+RUN pip install tensorboardX
 #RUN pip install git+https://github.com/lanpa/tensorboardX
