@@ -18,11 +18,12 @@ RUN conda install --yes \
 
 #RUN conda install --quiet --yes pytorch torchvision cuda92 -c pytorch && \
 # pytorch 1.1
-RUN apt-get update && apt-get -yq dist-upgrade \
-    && apt-get install -yq --no-install-recommends \
-    python3-pip
-    
-RUN pip3 install torch torchvision && \
+#RUN apt-get update && apt-get -yq dist-upgrade \
+#    && apt-get install -yq --no-install-recommends \
+#    python3-pip    
+#RUN pip3 install torch torchvision && \
+ 
+RUN conda install --quiet --yes pytorch  pytorch
  
 # RUN conda install pytorch torchvision cudatoolkit=9.2 -c pytorch && \  
 
