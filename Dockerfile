@@ -18,10 +18,14 @@ RUN conda install --yes \
 
 #RUN conda install --quiet --yes pytorch torchvision cuda92 -c pytorch && \
 # pytorch 1.1
-RUN conda install pytorch torchvision cudatoolkit=9.2 -c pytorch && \  
+RUN pip3 install https://download.pytorch.org/whl/cu90/torch-1.1.0-cp36-cp36m-win_amd64.whl && \
+    pip3 install torchvision && \
+# RUN conda install pytorch torchvision cudatoolkit=9.2 -c pytorch && \  
+
 # Pytorch 0.4.1
 #RUN conda install --quiet --yes pytorch=0.4.1 torchvision cuda92 -c pytorch && \
 
+# Pytorch CPU
 #RUN conda install --quiet --yes pytorch-cpu torchvision-cpu -c pytorch && \
     conda remove --quiet --yes --force qt pyqt && \
     conda clean -tipsy && \
