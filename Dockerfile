@@ -22,8 +22,8 @@ RUN apt-get update && apt-get -yq dist-upgrade \
     && apt-get install -yq --no-install-recommends \
     python3-pip
     
-RUN pip3 install https://download.pytorch.org/whl/cu90/torch-1.1.0-cp36-cp36m-win_amd64.whl && \
-    pip3 install torchvision && \
+RUN pip3 install torch torchvision && \
+ 
 # RUN conda install pytorch torchvision cudatoolkit=9.2 -c pytorch && \  
 
 # Pytorch 0.4.1
