@@ -22,7 +22,7 @@ RUN conda install --yes \
 #    && apt-get install -yq --no-install-recommends \
 #    python3-pip    
 #RUN pip3 install torch torchvision && \
-RUN conda install --quiet --yes pytorch  pytorch && \
+RUN conda install --quiet --yes -c pytorch  pytorch && \
  
 # Pytorch 0.4.1
 #RUN conda install --quiet --yes pytorch=0.4.1 torchvision cuda92 -c pytorch && \
