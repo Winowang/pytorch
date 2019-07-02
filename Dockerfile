@@ -33,7 +33,7 @@ RUN conda install --quiet --yes  pytorch torchvision cudatoolkit=9.0 -c pytorch 
 #RUN conda install --quiet --yes pytorch-cpu torchvision-cpu -c pytorch && \
     conda remove --quiet --yes --force qt pyqt && \
     conda clean -tipsy && \
-    npm cache clean --force && \
+    #npm cache clean --force && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     rm -rf /home/.cache/yarn && \
     rm -rf /home/.node-gyp
