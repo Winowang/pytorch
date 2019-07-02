@@ -14,16 +14,17 @@ RUN conda install --yes \
 
 # pytorch  
 # please vist the URL(https://pytorch.org/) to check more verions for cpu or gpu
-#RUN conda install --quiet --yes pytorch torchvision cuda90 -c pytorch && \
-
 #RUN conda install --quiet --yes pytorch torchvision cuda92 -c pytorch && \
+
 # pytorch 1.1
 #RUN apt-get update && apt-get -yq dist-upgrade \
 #    && apt-get install -yq --no-install-recommends \
 #    python3-pip    
 #RUN pip3 install torch torchvision && \
-RUN conda install --quiet --yes -c pytorch  pytorch && \
- 
+
+#RUN conda install --quiet --yes -c pytorch pytorch && \
+RUN conda install --quiet --yes  pytorch torchvision cudatoolkit=9.0 -c pytorch && \
+
 # Pytorch 0.4.1
 #RUN conda install --quiet --yes pytorch=0.4.1 torchvision cuda92 -c pytorch && \
 
