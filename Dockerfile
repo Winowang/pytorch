@@ -24,7 +24,9 @@ RUN conda install --yes \
 #RUN pip3 install torch torchvision && \
 
 #RUN conda install --quiet --yes -c pytorch pytorch && \
-RUN conda install --quiet --yes  pytorch torchvision cudatoolkit=9.0 -c pytorch && \
+#RUN conda install --quiet --yes  pytorch torchvision cudatoolkit=9.0 -c pytorch && \
+RUN conda install --quiet --yes  pytorch torchvision cudatoolkit=10.0 -c pytorch && \
+
 
 # Pytorch 0.4.1
 #RUN conda install --quiet --yes pytorch=0.4.1 torchvision cuda92 -c pytorch && \
