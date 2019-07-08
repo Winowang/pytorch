@@ -39,8 +39,8 @@ RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-
         python${PYTHON_VERSION} \
         python${PYTHON_VERSION}-dev \
         librdmacm1 \
-        libibverbs1 \
-        ibverbs-providers \
+        libibverbs1
+        #ibverbs-providers \
         
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
