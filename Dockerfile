@@ -10,7 +10,7 @@ ENV NCCL_VERSION=2.4.7-1+cuda10.0
 ENV MXNET_VERSION=1.4.1
 
 # Python 2.7 or 3.6 is supported by Ubuntu Bionic out of the box
-ARG python=3.6
+ARG python=2.7
 ENV PYTHON_VERSION=${python}
 
 # Set default shell to /bin/bash
@@ -40,7 +40,10 @@ RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-
         python${PYTHON_VERSION}-dev \
         librdmacm1 \
         libibverbs1 \
-        ibverbs-providers
+        ibverbs-providers \
+        
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 RUN if [[ "${PYTHON_VERSION}" == "3.6" ]]; then \
         apt-get install -y python${PYTHON_VERSION}-distutils; \
