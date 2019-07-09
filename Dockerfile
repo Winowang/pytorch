@@ -123,6 +123,7 @@ RUN pip install jupyter \
                 matplotlib
 
 RUN mkdir /etc/jupyter/ && wget -P /etc/jupyter/  https://raw.githubusercontent.com/jupyter/docker-stacks/master/base-notebook/jupyter_notebook_config.py
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* && rm -rf /root/.cache/pip/http/*
 
 WORKDIR "/examples"
 
