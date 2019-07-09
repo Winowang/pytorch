@@ -41,9 +41,8 @@ RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-
         librdmacm1 \
         libibverbs1
         #ibverbs-providers \
-        
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+ #&& apt-get clean \
+ #&& rm -rf /var/lib/apt/lists/*
 
 RUN if [[ "${PYTHON_VERSION}" == "3.6" ]]; then \
         apt-get install -y python${PYTHON_VERSION}-distutils; \
